@@ -74,7 +74,7 @@ require './conexion/sesion.php';
                 <a href="empresas/functions/nuevo.php" class="stretched-link">Novo Rexistro Empresas</a>
               </div>
               <div class="col-auto d-none d-lg-block">
-                <img src="https://images.unsplash.com/photo-1645280403333-3775178fc8c6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=235&q=80">
+                <img src="https://images.unsplash.com/photo-1602464729960-f95937746b68?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=235&q=80">
               </div>
             </div>
           </div>
@@ -87,7 +87,7 @@ require './conexion/sesion.php';
   <footer-component></footer-component>
 
 
-  <script src="./assets/js/bootstrap.bundle.min.js"
+  <script src="./assets/js/bootstrap.bundle.min.js"></script>
 
   <!-- el código html de arriba es el del index que creamos con las dependencias + un h1 de prueba
 y un enlace para salir (comprobar que funciona el logout) -->

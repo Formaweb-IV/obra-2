@@ -5,22 +5,17 @@
     <meta charset="UTF-8">
     <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>CRM-SOL/Login de Usuario</title>
+    <link rel="icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="../assets/css/index.css">
+    <script src="../components/js/headerout.js"></script>
     <script src="../components/js/footer.js"></script>
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/bootstrap-theme.css" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/login.css">
-    <title>Login de Usuario</title>
 </head>
+<body style="background-size: contain; background: url(../assets/img/marcel-strauss-oKfcrzCM9og-unsplash.png);">
 <!-- MENU SUPERIOR -->
-<header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-
-
-        <div class="collapse navbar-collapse justify-content-md-center" id="navlogin">
-            <h1 id="solh1" class="fw-light text-white">Servizo de Orientación Laboral</h1>
-        </div>
-    </nav>
-</header>
+<header-component></header-component>
 
 <main>
     <!-- LOGIN -->
