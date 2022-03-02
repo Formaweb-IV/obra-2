@@ -16,11 +16,10 @@ $resultado = $mysqli->query($sql);
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="gl">
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../assets/css/index.css">
   <script src="../components/js/header.js"></script>
@@ -35,9 +34,9 @@ $resultado = $mysqli->query($sql);
 
 
   <div class="container mb-4">
-    <div class="container mb-5">
+    <div class="container mb-2">
       <div class="row">
-        <h2 class="text-center mt-4 mb-3">Persoas</h2>
+        <h2 class="text-start fw-light fs-3 text mt-4">Persoas</h2>
 
         <div class="col">
           <a href="functions/nuevo.php" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="21" fill="currentColor" class="bi bi-person-plus" viewBox="-3 1 18 18">
@@ -56,29 +55,42 @@ $resultado = $mysqli->query($sql);
         </div>
       </div>
     </div>
+
+
+
+    <?php
+/* migas de pan */
+ $crumbs = explode("/",$_SERVER["REQUEST_URI"]);
+foreach($crumbs as $crumb){
+    echo ucfirst(str_replace(array(".php","_"),array(""," "),$crumb) . ' ');
+}
+?>
+
+
     <!-- TABLA -->
 
-    <div id="tabla" class="row table-responsive">
-      <table  class="table table-striped table-hover">
+    <div class="row">
+    <div id="tabla" class="table-responsive">
+      <table class="table table-striped table-hover">
         <thead>
-          <tr class="table-primary">
-            <th class="col-sm-1">Nome</th>
-            <th class="col-sm-3">Primeiro Apelido</th>
-            <th class="col-sm-3">Segundo Apelido</th>
-            <th class="col-sm-1">DNI/NIF</th>
-            <th class="col-sm-2">Data de nacemento</th>
-            <th class="col-sm-1">Sexo</th>
-            <th class="col-sm-3">Código postal</th>
-            <th class="col-sm-1">Teléfono</th>
-            <th class="col-sm-2">Correo</th>
-            <th class="col-sm-1">Accións</th>
+          <tr class="table-primary ">
+            <th class="col-sm-1 fs-6 text-uppercase fw-light">Nome</th>
+            <th class="col-sm-3 fs-6 text-uppercase fw-light">Apelido1</th>
+            <th class="col-sm-3 fs-6 text-uppercase fw-light">Apelido2</th>
+            <th class="col-sm-1 fs-6 text-uppercase fw-light">DNI/NIF</th>
+            <th class="col-sm-2 fs-6 text-uppercase fw-light">Nacemento</th>
+            <th class="col-sm-1 fs-6 text-uppercase fw-light">Sexo</th>
+            <th class="col-sm-3 fs-6 text-uppercase fw-light">CP</th>
+            <th class="col-sm-1 fs-6 text-uppercase fw-light text-center">Teléfono</th>
+            <th class="col-sm-2 fs-6 text-uppercase fw-light">Correo</th>
+            <th class="col-sm-1 fs-6 text-uppercase fw-light">Accións</th>
           </tr>
         </thead>
 
         <tbody>
           <?php while ($row = $resultado->fetch_array(MYSQLI_ASSOC)) { ?>
             <tr>
-              <td><?php echo $row['nome']; ?></td>
+              <td class="text-nowrap"><?php echo $row['nome']; ?></td>
               <td><?php echo $row['primeiro_apelido']; ?></td>
               <td><?php echo $row['segundo_apelido']; ?></td>
               <td><?php echo $row['nif']; ?></td>
@@ -104,9 +116,27 @@ $resultado = $mysqli->query($sql);
         </tbody>
       </table>
     </div>
+    </div>
   </div>
 
   <footer-component></footer-component>
+
+
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+<script>
+// Add your javascript here
+$(function() {
+   $(".nav li").on("click", function() {
+    $(".nav li").removeClass("active");
+    $(this).addClass("active");
+  });
+  
+});
+
+</script>
 
 </body>
 
