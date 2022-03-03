@@ -30,17 +30,22 @@ require '../../conexion/conexion.php';
 	$resultado = $mysqli->query($sql);	
 ?>
 
-<html lang="es">
-	<head>
-		
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="../css/bootstrap.min.css" rel="stylesheet">
-	<link href="../css/bootstrap-theme.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<link rel="stylesheet" href="../css-obra/guardar-eliminar-update.css">
-	<script src="../js/jquery-3.6.0.min.js"></script>
-	<script src="../js/bootstrap.min.js"></script>
-	</head>
+<!DOCTYPE html>
+<html lang="gl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../assets/css/index.css">
+  <script src="../../../components/js/headerin.js"></script>
+  <script src="../../../components/js/footer.js"></script>
+  <title>Empresas - Modificar rexistro</title>
+
+  <script src="./assets/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  
+</head>
+
 	
 	<body>
 		<div class="container">
