@@ -16,30 +16,26 @@ class Header extends HTMLElement {
       <div class="collapse navbar-collapse" id="navbarsops">
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="./index.php">INICIO</a>
+            <a class="nav-link active" aria-current="page" href="../../index.php">INICIO</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="../citas">CITAS</a>
+            <a class="nav-link" aria-current="page" href="../../citas">CITAS</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="../persoas">PERSOAS</a>
+            <a class="nav-link" aria-current="page" href="../../persoas">PERSOAS</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="../empresas">EMPRESAS</a>        
+            <a class="nav-link" aria-current="page" href="../../empresas">EMPRESAS</a>        
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="../login/logout.php">SAÍR</a>        
+            <a class="nav-link" aria-current="page" href="../../login/logout.php">SAÍR</a>        
           </li>
         </ul>
         
-<div class="search collapsed">
+<div class="buscador collapsed">
   <input type="text" placeholder="Buscar">
-  <a><span class="bi-search"></span></a>
+  <a></a>
 </div>
-
-        <!-- form>
-          <input class="form-control" type="text" placeholder="Buscar" aria-label="Buscar">
-        </form -->
       </div>
     </div>
   </nav>`;

@@ -8,13 +8,13 @@ class Footer extends HTMLElement {
         
 <style>
 #foooter{
-  position:absolute; bottom: 0; margin: 0 auto;
+  position:relative; bottom: 0; margin: 0 auto;
 }
 </style>
 
 
   <div class="container-fluid text-center" id="foooter">
-        <footer  class="py-3">
+        <footer class="py-3">
         <div class=" justify-content-center text-center container">
       <span class="text-black ">© 2022 Servizo de Orientación Laboral</span>
     

@@ -15,6 +15,8 @@ $light: #5A7E99;
 $border-radius: 0rem;
 $baseBorderRadius: 0;
 
+$transition-collapse:         height .35s ease;
+
 
 // Required
 @import "bootstrap/scss/functions";
@@ -42,12 +44,12 @@ $baseBorderRadius: 0;
 // @import "bootstrap/scss/pagination";
 // @import "bootstrap/scss/badge";
 // @import "bootstrap/scss/alert";
-// @import "bootstrap/scss/progress";
- @import "bootstrap/scss/list-group";
+@import "bootstrap/scss/progress";
+@import "bootstrap/scss/list-group";
 @import "bootstrap/scss/close";
 // @import "bootstrap/scss/toasts";
 @import "bootstrap/scss/modal"; // Requires transitions
-// @import "bootstrap/scss/tooltip";
+@import "bootstrap/scss/tooltip";
 // @import "bootstrap/scss/popover";
 // @import "bootstrap/scss/carousel";
 // @import "bootstrap/scss/spinners";
@@ -74,7 +76,18 @@ $baseBorderRadius: 0;
   fill: currentColor;
 } */
 
+// collapse
+.collapse {
+  &:not(.show) {
+    display: none;
+  }
+}
 
+.collapsing {
+  height: 0;
+  overflow: hidden;
+  @include transition($transition-collapse);
+}
 
 // Formulario login
 .form-signin {
@@ -191,7 +204,13 @@ t-tab y t-content = elementos li -> NECESARIOS PARA EL JS */
   max-height: 3000px;
   transition: max-height 1.25s ease 0.5s;
 }
+
+.btn-outline-primary :hover { background-color: #c1d8f0;}
+
+
 /* los colores comentados son los originales del creador, los que quedan ativos son los que fui probando */
+
+
 
 /* AÑADIDO POR VER */
 .t-content p{
@@ -200,4 +219,81 @@ t-tab y t-content = elementos li -> NECESARIOS PARA EL JS */
 
 #tabla{
   border-bottom: black 1px solid;
+}
+
+
+/* element activo no menu */
+.nav-link {
+  color: green;
+}
+
+.nav-item>a:hover {
+  color: green;
+}
+
+/*code to change background color*/
+.navbar-nav>.active>a {
+  background-color: #C0C0C0;
+  color: #08e708;
+}
+
+
+/* buscador collapsable */
+.buscador {
+  width: 12em;
+  height: 2em;
+  padding: 0;
+  margin: 0;
+  line-height: 2em;
+  background-color: #fff;
+  position: relative;
+  transition: all .25s linear;
+  input {
+    width: 9.5em;
+    height: 2em;
+    line-height: 1em;
+    padding: 0 0 0 .5em;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 1em;
+    color: #333;
+    float: left;
+    transition: all .25s linear;
+  }
+  a {
+    width: 2em;
+    height: 2em;
+    line-height: 2em;
+    padding: 0;
+    color: $primary;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: all .25s linear;
+    &:before {
+      content: '\1F50D';
+      /*font-family: bootstrap-icons;
+      font-style: normal;*/
+    }
+    &:hover {
+      color: #f00;
+    }
+  }
+  &.collapsed {
+    width: 2em;
+    margin-left: 10em;
+    input {
+      width: 0;
+    }
+    a {
+      color: #999;
+      &:hover {
+        color: #bbb;
+      }
+    }
+  }
 }

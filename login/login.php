@@ -17,7 +17,7 @@
 <!-- MENU SUPERIOR -->
 <header-component></header-component>
 
-<main>
+<main class="pb-5">
     <!-- LOGIN -->
 
     <div id="login-container" class="form-signin d-flex justify-content-center ">

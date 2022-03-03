@@ -9,16 +9,20 @@ $row = $resultado->fetch_array(MYSQLI_ASSOC);
 
 ?>
 
+<!DOCTYPE html>
+<html lang="gl">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nueva Empresa</title>
-  <!-- esto no sirve no? -->
-  <link rel="stylesheet" href="assets/css/style.css">
-  <!-- CND de bootstrap -> cambiar cuando toque -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <!-- ESTILOS DE LAS PESTAÑAS Y SU CONTENIDO -> MODIFICAR CON BOOTSTRAP O LO QUE SEA -->
-  <link rel="stylesheet" href="../../tabs.css">
+  <link rel="stylesheet" href="../../../assets/css/index.css">
+  <script src="../../../components/js/headerin.js"></script>
+  <script src="../../../components/js/footer.js"></script>
+  <title>Empresas - Modificar rexistro</title>
+
+  <script src="./assets/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  
 </head>
 
 <body>
